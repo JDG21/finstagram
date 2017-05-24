@@ -21,3 +21,10 @@ main {
 h1 {
     font-family: Pacifico, cursive;
 }
+h2 {
+    font-size: 14px;
+}
+h3 {
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
