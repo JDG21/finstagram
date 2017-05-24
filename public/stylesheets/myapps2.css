@@ -16,8 +16,8 @@ main {
     border-radius: 50%;
 }
 .post .user-info h2 {
-    font-family: Freight Sans, Proxima Nova;
+    font-family: Segoe UI,Roboto, Helvetica, Arial, sans-serif;
 }
-.post .user-info h2: hover {
-    background-color: blue;
+h1 {
+    font-family: Pacifico, cursive;
 }
