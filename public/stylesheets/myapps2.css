@@ -1,0 +1,23 @@
+header {
+    background-color: #125688;
+    color: white;
+}
+body {
+    background-color: whitesmoke;
+}
+main {
+    background-color: white;
+    padding: 16px;
+}
+.post {
+    margin-bottom: 48px;
+}
+.post .user-info img {
+    border-radius: 50%;
+}
+.post .user-info h2 {
+    font-family: Freight Sans, Proxima Nova;
+}
+.post .user-info h2: hover {
+    background-color: blue;
+}
