@@ -6,7 +6,7 @@ body {
     background-color: whitesmoke;
 }
 main {
-    background-color: white;
+    background-color: whitesmoke;
     padding: 16px;
 }
 .post {
@@ -27,4 +27,12 @@ h2 {
 h3 {
     font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: 15px;
+}
+.post {
+    border: solid 1px gray;
+    background-color: white;
+    padding: 20px;
+    height: 855px;
+    width: 602px;
+    position: fixed;
 }
