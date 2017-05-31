@@ -29,8 +29,6 @@ h3 {
     font-size: 15px;
 }
 .post {
-    border: solid 1px gray;
     background-color: white;
-    padding: 20px;
-    opacity: 20;
+    padding: 50px;
 }
