@@ -3,67 +3,28 @@
             <h1> FinstaGram </h1>
         </header>
     <main role="main">
+        <% @posts.each do |post| %>
         <article class="post"> 
             <div class="user-info"> 
-                <img src="<%= @post_WannaCry[:avatar_url] %>" alt="<%= @post_WannaCry[:username] %>">
-                <h2><%= @post_WannaCry[:username]%></h2>
-                <h3> <%= @post_WannaCry[:humanized_time_ago]%></h3>
+                <img src="<%= post[:avatar_url] %>" alt="<%= post[:username] %>">
+                <h2> <%= post[:username]%> </h2>
+                <h3> <%= post[:humanized_time_ago]%> </h3>
             </div>
             <a class="photo" href="#">
-                <img src="<%= @post_WannaCry[:photo_url] %>"
-                alt="post from <%= @post_WannaCry[:username] %>">
+                <img src="<%= post[:photo_url] %>"
+                alt="post from <%= post[:username] %>">
              </a>
             <div class="actions"> 
-                <%= @post_WannaCry[:like_count] %> Likes
-                <span class="comment-count"><%= @post_WannaCry[:comment_count] %> Comments </span>
+                <%= post[:like_count] %> Likes
+                <span class="comment-count"><%= post[:comment_count] %> Comments </span>
             </div>
                 <ul class="comments">
+                    <% post[:comments].each do |comment| %>
                     <li> 
-                        <p> <%= @post_WannaCry[:comments][0][:username] %>: <%= @post_WannaCry[:comments][0][:text] %> </p>
-                        <p>  </p>
+                        <p> <%= comment[:username] %>: <%= comment[:text] %> </p>
                     </li>
+                    <% end %>
                 </ul>
         </article>
-        <article class="post">
-            <div class="user-info"> 
-                <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAJTAAAAJGMzOGVhMmY0LWUwNzUtNGI3YS05MGU0LWE3NDU4YWI2NTI4ZQ.png"
-                alt="Absolute_Sofware">
-                <h2> ABT_2017</h2>
-                <h3> 2m </h3>
-            </div>
-            <a class="photo" href="#">
-                <img src="https://www.absolute.com/-/media/Commercial/images/icons/linear/billion-endpoints.png?la=en&hash=FC47FEACEFCE6CB3501CFCF0C7A7E57B7AFB5B27"
-                alt="ABT2017">
-            </a>
-            <div class="actions">
-                3 likes
-                <span class="comment-count"> 0 Comments</span>
-            </div>
-            <ul class="comments">
-                <li>
-                    <p> <strong> ABT_2017: </strong> You should of had Absolute Software turned on buddy!</p>
-                </li>
-            </ul>
-        </article>
-        <article class="post">
-            <div class="user-info">
-                <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAXlAAAAJDA5ZTQzN2YxLTFhNWItNDQzYy04OWY2LWZiMzZmMDQ0OWNhMg.png"
-                alt="Sophos">
-                <h2> Sophos_2017 </h2>
-                <h3> 1h </h3>
-            </div>
-            <a class="photo" href="#">
-                <img src="http://www.ft.com/fastft/files/2017/05/sophos-attack.png"
-                alt="Sophos-Stocks">
-            </a>
-            <div class="actions">
-                0 Likes
-                <span class="comment-count"> 0 Comments </span>
-            </div>
-            <ul class="comments">
-                <li>
-                    <p> <strong> Sophos_2017:</strong> Stocks going up, Weeehoooo </p>
-                </li>
-            </ul>
-        </article>
+        <% end %>
     </main>
