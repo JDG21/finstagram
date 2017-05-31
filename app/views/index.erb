@@ -1,37 +1,26 @@
-<!doctype HTML>
-<html> 
-    <head>
-        <link rel="stylesheet" href="/public/stylesheets/normalize.css">
-        <link rel="stylesheet" href="/public/stylesheets/lib.css">
-        <link rel="stylesheet" href="/public/stylesheets/myapps2.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-        <title> FinstaGram </title> 
-    </head>
-    <body> 
+
         <header> 
             <h1> FinstaGram </h1>
         </header>
-    <main role="Main">
+    <main role="main">
         <article class="post"> 
             <div class="user-info"> 
-                <img src="https://www.nbs-system.com/wp-content/uploads/white-hats.png"
-                alt="wannacry_05_">
-                <h2> WannaCry_2017 </h2>
-                <h3> 1m </h3>
+                <img src="<%= @post_WannaCry[:avatar_url] %>" alt="<%= @post_WannaCry[:username] %>">
+                <h2><%= @post_WannaCry[:username]%></h2>
+                <h3> <%= @post_WannaCry[:humanized_time_ago]%></h3>
             </div>
             <a class="photo" href="#">
-                <img src="https://www.troyhunt.com/content/images/2017/05/WannaCrypt.jpg"
-                alt="wannacry_05">
+                <img src="<%= @post_WannaCry[:photo_url] %>"
+                alt="post from <%= @post_WannaCry[:username] %>">
              </a>
             <div class="actions"> 
-                0 Likes
-                <span class="comment-count"> 2 Comments </span>
+                <%= @post_WannaCry[:like_count] %> Likes
+                <span class="comment-count"><%= @post_WannaCry[:comment_count] %> Comments </span>
             </div>
                 <ul class="comments">
                     <li> 
-                        <p> <strong> WannaCry_2017: </strong> Just got Hacked over the weekend !!</p>
-                        <p> <strong>Sophos:</strong>  Sucks for you buddy :D </p>
+                        <p> <%= @post_WannaCry[:comments][0][:username] %>: <%= @post_WannaCry[:comments][0][:text] %> </p>
+                        <p>  </p>
                     </li>
                 </ul>
         </article>
@@ -78,5 +67,3 @@
             </ul>
         </article>
     </main>
-    </body>
-</html>

@@ -7,7 +7,7 @@ def humanized_time_ago(minute_num)
 end
 
 get '/' do
-        post_WannaCry = {
+        @post_WannaCry = {
     username: "WannaCry_2017",
     avatar_url: "https://www.nbs-system.com/wp-content/uploads/white-hats.png",
     photo_url: "https://www.troyhunt.com/content/images/2017/05/WannaCrypt.jpg",
@@ -43,5 +43,6 @@ get '/' do
         text:  "Stocks going up, weehoooo"
         }]
     }
-    [post_WannaCry, post_ABT, post_Sophos].to_s
+    [@post_WannaCry, post_ABT, post_Sophos].to_s
+    erb :index
 end
