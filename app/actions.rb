@@ -5,3 +5,8 @@ get '/' do
        
     erb(:index)
 end
+
+get '/signup' do
+    @user = User.new
+    erb(:signup)
+end
