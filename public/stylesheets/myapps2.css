@@ -1,6 +1,7 @@
 header {
     background-color: white;
     color: black;
+    
 }
 body {
     background-color: whitesmoke;
@@ -20,6 +21,7 @@ main {
 }
 h1 {
     font-family: Pacifico, cursive;
+    margin-left: 30px;
 }
 h2 {
     font-size: 14px;
@@ -46,3 +48,8 @@ form {
     margin-top: 150px;
 }
 
+.logo img {
+    border-radius: 5px;
+    width: 40px;
+    margin-left: 35px;
+}
