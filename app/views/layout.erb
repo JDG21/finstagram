@@ -10,7 +10,7 @@
     </head>
     <body> 
         <header> 
-        <a class="logo" href="#">
+        <a class="logo" href="/">
             <img src="https://img.tinychan.org/img/1328039793912825.png">
         </a>
             <h1> FinstaGram </h1>
@@ -19,8 +19,8 @@
                 <%= current_user.username %>
                 <a href="/logout">Logout</a>
             <% else %>
-                <a href="/login">Login</a>
-                <a href="/signup">Signup</a>
+                <a class="login-top" href="/login">Login</a>
+                <a class="signup-top" href="/signup">Signup</a>
             <% end %>
             </div>
         </header>

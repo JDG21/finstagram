@@ -57,3 +57,25 @@ form {
 .info {
     text-align: justify;
 }
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.login-top {
+    margin-right: 35px;
+    font-size: 20px;
+}
+
+.signup-top {
+     margin-right: 50px;
+     font-size: 20px;
+}
+
+.login-info {
+    margin-right: 50px;
+    font-size: 20px;
+    
+}
