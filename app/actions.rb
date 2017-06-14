@@ -7,7 +7,7 @@ end
 
 get '/logout' do
     session[:user_id] = nil
-    "Logout Successful!"
+    redirect to('/login')
 end
 
 get '/login' do
@@ -22,9 +22,10 @@ post '/login' do
     
     if user && user.password == password
         session[:user_id] = user.id
-        "Success! User with id #{session[:user_id]} is logged in!"
-            
-        else
+        
+        redirect to('/')
+        
+     else
             
         @error_message = "Login Failed"
         erb(:login)
@@ -53,8 +54,7 @@ post '/signup' do
     @user = User.new({ email: email, avatar_url: avatar_url, username: username, password: password})
     
     if @user.save
-        
-        "User #{username} saved!"
+        redirect to('/login')
         
     else
         
