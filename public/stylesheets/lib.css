@@ -57,6 +57,7 @@ main {
   padding: .5em;
   background-color: white;
   border: solid 1px #244751;
+  border-radius: 5px;
   display: inline-block;
 }
 

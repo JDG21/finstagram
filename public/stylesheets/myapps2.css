@@ -67,15 +67,27 @@ form {
 .login-top {
     margin-right: 35px;
     font-size: 20px;
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 .signup-top {
      margin-right: 50px;
      font-size: 20px;
+     font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
 .login-info {
     margin-right: 50px;
     font-size: 20px;
+    font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     
+}
+.button {
+    border-radius: 10px;
+}
+.form-group {
+    text-align: center;
+}
+.form-group label {
+    text-align: left;
 }
