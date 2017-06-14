@@ -14,6 +14,15 @@
             <img src="https://img.tinychan.org/img/1328039793912825.png">
         </a>
             <h1> FinstaGram </h1>
+            <div class="login-info">
+                <% if current_user %>
+                <%= current_user.username %>
+                <a href="/logout">Logout</a>
+            <% else %>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+            <% end %>
+            </div>
         </header>
         <%= yield %>
     </body>
