@@ -5,6 +5,24 @@ helpers do
     end
 end
 
+get '/posts/new' do
+    @post = Post.new
+    erb(:"posts/new")
+end
+
+post '/posts' do
+    photo_url = params[:photo_url]
+    
+    @post = Post.new({ photo_url: photo_url, user_id: current_user.id })
+    
+    if @post.save
+        redirect(to('/'))
+    else
+        erb(:"posts/new")
+    end
+end
+
+
 get '/logout' do
     session[:user_id] = nil
     redirect to('/login')
@@ -61,5 +79,5 @@ post '/signup' do
         erb(:signup)
         
     end
-
+    
 end
