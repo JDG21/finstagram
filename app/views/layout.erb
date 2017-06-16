@@ -16,7 +16,9 @@
             <h1> FinstaGram </h1>
             <div class="login-info">
                 <% if current_user %>
-                <%= current_user.username %>
+                <div class="user-pic">
+                    <img src="<%= current_user.avatar_url %>">
+                </div>
                 <a href="/logout">Logout</a>
             <% else %>
                 <a class="login-top" href="/login">Login</a>
