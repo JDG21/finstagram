@@ -10,6 +10,11 @@ get '/posts/new' do
     erb(:"posts/new")
 end
 
+get '/posts/:id' do
+    @post = Post.find(params[:id])
+    erb(:"posts/show")
+end
+
 post '/posts' do
     photo_url = params[:photo_url]
     
@@ -21,12 +26,6 @@ post '/posts' do
         erb(:"posts/new")
     end
 end
-
-get '/posts/:id' do
-    @post = Post.find(params[:id])
-    erb(:"posts.show")
-end
-
 
 get '/logout' do
     session[:user_id] = nil
