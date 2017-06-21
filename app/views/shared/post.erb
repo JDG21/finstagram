@@ -19,7 +19,7 @@
         <ul class="comments">
             <% post.comments.each do |comment| %>
             <li> 
-                <p> <%= comment.user.username %>: <%= comment.text %> </p>
+                <p><strong> <%= comment.user.username %> </strong>: <%= comment.text %> </p>
             </li>
             <% end %>
         </ul>

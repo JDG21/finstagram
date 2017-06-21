@@ -96,5 +96,14 @@ form {
     width: 35px;
     border-radius: 100px;
     position: absolute;
-    right: 10px;
+    right: 125px;
 }
+
+.new-comment {
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.like-button {
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
